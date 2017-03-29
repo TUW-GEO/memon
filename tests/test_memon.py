@@ -25,3 +25,38 @@
 # IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
+
+'''
+Tests for the memory monitor basic functionality.
+'''
+
+from memon import MemoryMonitor
+import time
+
+def test_memon_increase_decrease():
+    """
+    Very simple test of increasing/decreasing memory usage
+    when generating and deleting a biggish list.
+    """
+    memmon = MemoryMonitor()
+    memmon.start()
+    used_mem = memmon.current_usage
+    ls = list(range(10000000))
+    after_mem = memmon.current_usage
+    assert after_mem > used_mem
+    del ls
+    after_del_mem = memmon.current_usage
+    assert after_del_mem < after_mem
+    memmon.stop()
+
+def test_memon_history():
+    """
+    Very simple test of the recording of the memory history.
+    """
+    memmon = MemoryMonitor()
+    memmon.start()
+    memmon.start_recording()
+    time.sleep(1)
+    memmon.stop_recording()
+    assert len(memmon.history) == 10
+    memmon.stop()

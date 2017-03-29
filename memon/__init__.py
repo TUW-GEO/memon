@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from .memon import MemoryMonitor
 import pkg_resources
 
 try:

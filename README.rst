@@ -2,8 +2,26 @@
 memon
 =====
 
+.. image:: https://travis-ci.org/TUW-GEO/memon.svg?branch=master
+    :target: https://travis-ci.org/TUW-GEO/memon
+
+.. image:: https://coveralls.io/repos/github/TUW-GEO/memon/badge.svg?branch=master
+    :target: https://coveralls.io/github/TUW-GEO/memon?branch=master
+
+.. image:: https://badge.fury.io/py/memon.svg
+    :target: https://badge.fury.io/py/memon
+
 Very simple memory monitor that records the percent of memory used. This can be
 useful if you want to dump data to disk if memory consumptions becomes too high.
+
+Installation
+============
+
+This package should be installable through pip:
+
+.. code::
+
+    pip install memon
 
 Description and Usage
 =====================
@@ -45,6 +63,30 @@ Because of these assumptions the ``memory_available()`` function calculates:
    delta = max(history) - min(history)
    level = mean(history) + delta
    level < memory_limit
+
+Contribute
+==========
+
+We are happy if you want to contribute. Please raise an issue explaining what
+is missing or if you find a bug. We will also gladly accept pull requests
+against our master branch for new features or bug fixes.
+
+Development setup
+-----------------
+
+For Development we recommend a ``conda`` environment
+
+Guidelines
+----------
+
+If you want to contribute please follow these steps:
+
+- Fork the memon repository to your account
+- make a new feature branch from the memon master branch
+- Add your feature
+- Please include tests for your contributions in one of the test directories.
+  We use py.test so a simple function called test_my_feature is enough
+- submit a pull request to our master branch
 
 Note
 ====

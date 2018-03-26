@@ -11,6 +11,9 @@ memon
 .. image:: https://badge.fury.io/py/memon.svg
     :target: https://badge.fury.io/py/memon
 
+.. image:: https://readthedocs.org/projects/memon/badge/?version=latest
+    :target: http://memon.readthedocs.io/en/latest/?badge=latest
+
 Very simple memory monitor that records the percent of memory used. This can be
 useful if you want to dump data to disk if memory consumptions becomes too high.
 

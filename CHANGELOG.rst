@@ -6,7 +6,6 @@ Version 0.2.0
 =============
 
 - Update pyscaffold v3.2.3
-- Update license to mit
 
 Version 0.1
 ===========

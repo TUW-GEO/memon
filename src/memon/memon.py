@@ -1,4 +1,4 @@
-# Copyright (c) 2017,Vienna University of Technology,
+# Copyright (c) 2025, TU Wien
 # Department of Geodesy and Geoinformation
 # All rights reserved.
 
